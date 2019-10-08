@@ -1,5 +1,5 @@
 $(function () {
-    loadBlocks() {
+    function loadBlocks() {
         $.ajax("/", {
             type: "GET"
         }).then(
@@ -16,6 +16,8 @@ $(function () {
             }
         );
     };
+
+    loadBlocks();
 
     $("#newAccount").on("submit", function (event) {
         event.preventDefault();
