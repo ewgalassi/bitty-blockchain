@@ -18,6 +18,9 @@ $(function () {
         $("#customerInfo").text("Hello, " + username + "! You currently have 0 PPcOIns").css("font-size", "24px").css("text-align", "right").css("padding-right", "150px");
 
         window.localStorage.setItem("username", username);
+        $("#newAccount").attr("id", "transaction");
+        $("#customer").attr("placeholder", "Number of PPcOIns you want to buy or sell (negative to sell)");
+        $("#customerButton").attr("value", "Buy/Sell");
     });
 });
 // const $characterStock = $("#character-stock");
