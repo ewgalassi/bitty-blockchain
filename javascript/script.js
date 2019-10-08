@@ -1,7 +1,7 @@
 $(function () {
     $("#newAccount").on("submit", function (event) {
         event.preventDefault();
-        var username = $(this).data("customer");
+        var username = $("#customer").val().trim();
 
         var customer = {
             username: username
@@ -15,6 +15,9 @@ $(function () {
                 console.log("Created user", username);
             }
         );
+        $("#customerInfo").text("Hello, " + username + "! You currently have 0 PPcOIns").css("font-size", "24px").css("text-align", "right").css("padding-right", "150px");
+
+        window.localStorage.setItem("username", username);
     });
 });
 // const $characterStock = $("#character-stock");

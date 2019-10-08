@@ -1,13 +1,13 @@
 var orm = require("../config/orm.js");
 
 var customer = {
-  selectOne: function (cb) {
-    orm.selectOne(`customers`, function (res) {
+  selectOne: function (vals, cb) {
+    orm.selectOne(vals, function (res) {
       cb(res);
     });
   },
   insertOne: function (cols, vals, cb) {
-    orm.insertOne(`blocks`, cols, vals, function (res) {
+    orm.insertOneCust(cols, vals, function (res) {
       cb(res);
     });
   },

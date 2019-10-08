@@ -7,7 +7,7 @@ var block = {
     });
   },
   insertOne: function (cols, vals, cb) {
-    orm.insertOne(`blocks`, cols, vals, function (res) {
+    orm.insertOneBlock(cols, vals, function (res) {
       cb(res);
     });
   }

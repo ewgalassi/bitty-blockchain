@@ -29,10 +29,36 @@ var orm = {
         cb(result);
       });
     },
-    insertOne: function(table, cols, vals, cb) {
-      var queryString = "INSERT INTO " + table;
+    insertOneCust: function(cols, vals, cb) {
+      var queryString = "SELECT * FROM customers WHERE " + cols + "=" + vals + ";";  
+
+      connection.query(queryString, vals, function(err, result) {
+        if (err) {
+          throw err;
+        }
+
+        cb(result);
+      });
+      
+      queryString = "INSERT INTO customers (";
+      queryString += cols.toString();
+      queryString += ") ";
+      queryString += "VALUES (";
+      queryString += printQuestionMarks(vals.length);
+      queryString += ") ";
   
-      queryString += " (";
+      console.log(queryString);
+  
+      connection.query(queryString, vals, function(err, result) {
+        if (err) {
+          throw err;
+        }
+  
+        cb(result);
+      });
+    },
+    insertOneBlock: function(cols, vals, cb) {
+      var queryString = "INSERT INTO blocks (";
       queryString += cols.toString();
       queryString += ") ";
       queryString += "VALUES (";
