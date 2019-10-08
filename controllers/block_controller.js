@@ -7,6 +7,7 @@ var customer = require("../models/customer.js");
 
 router.get("/", function (req, res) {
   block.selectAll(function (data) {
+    console.log(data)
     return res.json(data);
   });
 });
