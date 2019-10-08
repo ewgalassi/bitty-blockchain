@@ -7,10 +7,7 @@ var customer = require("../models/customer.js");
 
 router.get("/", function (req, res) {
   block.selectAll(function (data) {
-    var hbsObject = {
-      blocks: data
-    };
-    console.log(hbsObject);
+    return res.json(data);
   });
 });
 
