@@ -1,10 +1,10 @@
-DROP DATABASE IF EXISTS `blockchain`;
-CREATE DATABASE `blockchain`;
+DROP DATABASE IF EXISTS `blockchain_db`;
+CREATE DATABASE `blockchain_db`;
 
-USE `blockchain`;
+USE `blockchain_db`;
 
 CREATE TABLE `blocks` (
-  `index` INTEGER(10) NOT NULL AUTO_INCREMENT,
+  `index` Int(10) NOT NULL AUTO_INCREMENT,
   `previousHash` VARCHAR(50) NOT NULL,
   `timestamp` VARCHAR(50) NOT NULL,
   `transaction` VARCHAR(50) NOT NULL,

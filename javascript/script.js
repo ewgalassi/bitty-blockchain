@@ -1,4 +1,22 @@
 $(function () {
+    loadBlocks() {
+        $.ajax("/", {
+            type: "GET"
+        }).then(
+            function (data) {
+                data.map(function (trxn) {
+                    var td0 = $("<td>").text(trxn.index).attr("class", "cell");
+                    var td1 = $("<td>").text(trxn.previousHash).attr("class", "cell");
+                    var td2 = $("<td>").text(trxn.timestamp).attr("class", "cell");
+                    var td3 = $("<td>").text(trxn.transaction).attr("class", "cell");
+                    var td4 = $("<td>").text(trxn.hash).attr("class", "cell");
+                    var tr = $("<tr>" + td0 + td1 + td2 + td3 + td4 + "</tr>").attr("class", "row");
+                    $("#transactions tr:last").after(tr);
+                })
+            }
+        );
+    };
+
     $("#newAccount").on("submit", function (event) {
         event.preventDefault();
         var username = $("#customer").val().trim();
