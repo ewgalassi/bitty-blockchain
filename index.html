@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLOCKmx</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Welcome to BLOCKmx!</h1>
+    <br>
+    <h2>Let's start an account and start trading some PPcOIns</h2>
+    <form id="newAccount">
+        <input type="text" id="customer" placeholder="Your name"><br><br>
+        <input id="customerButton" type="submit" value="Enter your name to login or create a new customer account">
+    </form>
+    <br>
+    <div id="customerInfo"></div>
+    <br>
+    <div id="blockTable">
+        <h3>Previous Transactions</h3>
+        <table>
+            <tr class="row">
+                <th class="cell">Index</th>
+                <th class="cell">Previous Hash</th>
+                <th class="cell">Timestamp</th>
+                <th class="cell">Transaction</th>
+                <th class="cell">Hash</th>
+            </tr>
+            <tr class="row">
+                <td class="cell">1</td>
+                <td class="cell">2</td>
+                <td class="cell">3</td>
+                <td class="cell">4</td>
+                <td class="cell">5</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="javascript/script.js"></script>
+    <script src="javascript/blockchain.js"></script>
+</body>
+
+</html>
