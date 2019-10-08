@@ -19,6 +19,10 @@ connection.connect(function(err) {
     return;
   }
   console.log("connected as id " + connection.threadId);
+  connection.query("CREATE DATABASE blockchain_db", function (err, res) {
+    if (err) throw err;
+    console.log("Database created");
+  });
 });
 
 module.exports = connection;
