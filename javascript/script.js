@@ -19,7 +19,7 @@ $(function () {
 
         window.localStorage.setItem("username", username);
         $("#newAccount").attr("id", "transaction");
-        $("#customer").attr("placeholder", "Number of PPcOIns you want to buy or sell (negative to sell)");
+        $("#customer").attr("type", "number");
         $("#customerButton").attr("value", "Buy/Sell");
     });
 });
