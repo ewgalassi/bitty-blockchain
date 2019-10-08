@@ -19,7 +19,7 @@ $(function () {
 
         window.localStorage.setItem("username", username);
         $("#newAccount").attr("id", "transaction");
-        $("#customer").attr("type", "number");
+        $("#customer").attr("type", "number").attr("placeholder", 0);
         $("#customerButton").attr("value", "Buy/Sell");
     });
 });
