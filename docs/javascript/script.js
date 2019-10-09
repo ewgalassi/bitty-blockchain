@@ -29,7 +29,6 @@ $(document).ready(function () {
         $("#customerInfo").text("Hello, " + username + "! You currently have 0 PPcOIns").css("font-size", "24px").css("text-align", "right").css("padding-right", "150px");
 
         window.localStorage.setItem("username", username);
-        $("#newAccount").attr("id", "transaction");
         $("#customer").style("visibility", "hidden");
         $("#transaction").style("visibility", "visible");
         $("#customerButton").attr("value", "Buy/Sell");
