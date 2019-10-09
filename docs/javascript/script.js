@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log("ready")
     $.get("/", 
         function (data) {
             data.map(function (trxn) {
