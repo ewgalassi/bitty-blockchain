@@ -30,7 +30,8 @@ $(document).ready(function () {
 
         window.localStorage.setItem("username", username);
         $("#newAccount").attr("id", "transaction");
-        $("#customer").attr("type", "number").attr("placeholder", 0);
+        $("#customer").style("visibility", "hidden");
+        $("#transaction").style("visibility", "visible");
         $("#customerButton").attr("value", "Buy/Sell");
     });
 });

@@ -39,3 +39,7 @@ form {
 #blockTable {
   margin-left: 100px;
 }
+
+#transaction {
+  visibility: hidden;
+}
