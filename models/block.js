@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     timestamp: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: Sequelize.NOW
+      defaultValue: sequelize.NOW
     },
     transaction: {
       type: DataTypes.STRING(400),
