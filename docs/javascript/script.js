@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    $.ajax("/", {
-        type: "GET"
-    }).then(
+    $.get("/", 
         function (data) {
             data.map(function (trxn) {
                 var td0 = $("<td>").text(trxn.index).attr("class", "cell");
@@ -22,10 +20,7 @@ $(document).ready(function () {
             username: username
         };
 
-        $.ajax("/api/customer", {
-            type: "POST",
-            data: customer
-        }).then(
+        $.post("/api/customer" + username, 
             function () {
                 console.log("Created user", username);
             }
