@@ -6,7 +6,7 @@ var PORT = process.env.PORT || 7000;
 
 var app = express();
 
-app.use(express.static("public"));
+app.use(express.static("docs"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
