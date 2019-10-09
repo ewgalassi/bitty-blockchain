@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BLOCKmx</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Karla|Raleway&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
@@ -16,20 +17,21 @@
     <form id="newAccount">
         <input type="text" id="customer" placeholder="Your name">
         <br><br>
-        <input id="customerButton" type="submit" value="Enter your name to login or create a new customer account">
+        <input id="customerButton" type="submit" value="Submit">
     </form>
+    <br><br>
     <form id="transaction">
         <input type="number" id="quantity" placeholder="0">
         <br><br>
         <input id="transactButton" type="submit" value="Buy/Sell">
     </form>
     <br>
-    <div id="customerInfo"></div>
+    <h2 id="customerInfo"></h2>
     <br>
     <div id="blockTable">
         <h3>Previous Transactions</h3>
         <table id="transactions">
-            <tr class="row">
+            <tr>
                 <th class="cell">Index</th>
                 <th class="cell">Previous Hash</th>
                 <th class="cell">Timestamp</th>
@@ -46,7 +48,7 @@
         </table>
     </div>
 
-    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <!-- <script src="javascript/blockchain.js"></script> -->
 </body>
 
