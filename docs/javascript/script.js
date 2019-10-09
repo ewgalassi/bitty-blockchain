@@ -31,7 +31,6 @@ $(document).ready(function () {
         window.localStorage.setItem("username", username);
         $("#customer").style("visibility", "hidden");
         $("#transaction").style("visibility", "visible");
-        $("#customerButton").attr("value", "Buy/Sell");
     });
 });
 // const $characterStock = $("#character-stock");
