@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $.get("/api/blocks", 
+    $.get("/", 
         function (data) {
             data.map(function (trxn) {
                 var td0 = $("<td>").text(trxn.index).attr("class", "cell");
