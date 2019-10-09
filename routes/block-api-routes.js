@@ -13,7 +13,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the blocks
-  app.get("/", function(req, res) {
+  app.get("/api/blocks", function(req, res) {
     // Here we add an "include" property to our options in our findAll query
     db.Block.findAll().then(function(dbBlock) {
       res.json(dbBlock);
